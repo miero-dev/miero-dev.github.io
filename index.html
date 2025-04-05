@@ -11,67 +11,104 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0f172a; /* Even darker background */
+            background-color: #0f172a;
             color: #f7fafc;
             line-height: 1.8;
         }
         .comic-panel {
-            background-color: #2d3748;
-            border-radius: 16px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            background-color: rgba(45, 55, 72, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
             margin-bottom: 3rem;
-            padding: 2rem;
-            border: 1px solid #4a5568;
+            padding: 2.5rem;
+            border: 1px solid rgba(74, 85, 104, 0.4);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             display: flex;
-            flex-direction: column;
-            align-items: stretch;
-            gap: 1.5rem;
+            flex-direction: column; /* Stack items vertically by default */
+            align-items: center; /* Center items horizontally */
+            gap: 3rem;
         }
         .comic-panel:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6);
+            transform: translateY(-16px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
         }
         .comic-img {
-            width: 100%;
-            max-height: 600px;
+            width: 100%; /* Make image width 100% of its container */
+            height: auto;
+            max-height: 1000px;
             object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: box-shadow 0.3s ease-in-out;
-            margin-bottom: 0;
+            border-radius: 16px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: -0.5rem;
+            align-self: center; /* Center the image */
         }
         .comic-img:hover {
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            transform: scale(1.03);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
         }
         .comic-title {
             color: #f56565;
-            margin-bottom: 1.25rem;
-            font-size: 2.25rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
             text-align: center;
             display: none;
         }
         .comic-text {
-            color: #cbd5e0;
-            font-size: 1.1rem;
-            line-height: 1.9;
+            color: #e2e8f0;
+            font-size: 1.2rem;
+            line-height: 2;
             flex-grow: 1;
-            text-align: left;
+            text-align: center; /* Center the text */
+            word-wrap: break-word;
+            font-weight: 400;
+            letter-spacing: 0.05em;
         }
         @media (min-width: 1024px) {
             .comic-panel {
-                flex-direction: row;
+                flex-direction: column; /* Stack items vertically on larger screens too */
                 align-items: center;
                 gap: 3rem;
             }
             .comic-img {
-                max-width: 50%;
-                max-height: none;
+                width: 90%;
+                height: auto;
+                max-height: 1000px;
+                flex-shrink: 0;
+                margin-bottom: -0.5rem; /* Reduced margin-bottom */
+                align-self: center; /* Keep image centered */
             }
             .comic-text {
-                max-width: 50%;
+                flex-basis: auto;
+                max-width: 80%;
+                text-align: center;
             }
+        }
+        header {
+            background: linear-gradient(to right, #4a5568, #2d3748);
+            padding: 2rem 0;
+            border-bottom: 1px solid #718096;
+        }
+        header h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+        footer {
+            background-color: #2d3748;
+            color: #a0aec0;
+            padding: 2.5rem 0;
+            margin-top: 4rem;
+            border-top: 1px solid #4a5568;
+            border-radius: 16px 16px 0 0;
+        }
+        footer p {
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
         }
     </style>
 </head>
@@ -84,30 +121,38 @@
 
     <main class="container mx-auto py-8 px-4">
         <section class="comic-panel">
-            <img src="https://placehold.co/800x600/2D3748/F56565?text=Felix+Discovers+Power&font=Montserrat" alt="Felix Discovers Power" class="comic-img">
+            
+                <img  style="display: block; margin-left: auto; margin-right: auto;" src="https://placehold.co/1200x800/2D3748/F56565?text=Felix+Discovers+Power&font=Montserrat" alt="Felix Discovers Power" class="comic-img">
+            
             <p class="text-gray-300 text-base mt-2 comic-text">
-                In the mystical realm of Aetheria, where magic and technology intertwine, a young, surprisingly sophisticated cat named Felix discovers a hidden power within ancient ruins.
+                In the mystical realm of Aetheria, and across the celestial tapestry of our solar system, we find Felix, a young, surprisingly sophisticated cat with a penchant for beer, embarking on extraordinary adventures.
             </p>
         </section>
 
         <section class="comic-panel">
-            <img src="https://placehold.co/800x600/2D3748/F56565?text=Dark+Force+Approaches&font=Montserrat" alt="Dark Force Approaches" class="comic-img">
+            
+                <img  style="display: block; margin-left: auto; margin-right: auto;"  src="https://placehold.co/1200x800/2D3748/F56565?text=Dark+Force+Approaches&font=Montserrat" alt="Dark Force Approaches" class="comic-img">
+            
              <p class="text-gray-300 text-base mt-2 comic-text">
-                When a dark force threatens to engulf the land, Felix must embark on a perilous journey to awaken the legendary Aetherian Champions.
+                From the shadowed side of the Moon to the swirling storms of Jupiter, and the icy plains of Pluto, a dark force threatens to engulf each celestial body.  This time, the threat comes in the form of a relentless legion of robots, armed with advanced weaponry and an insatiable desire to conquer.  Felix, fueled by his ever-present inebriation, must embark on a perilous journey to awaken the legendary Aetherian Champions scattered across the cosmos.
             </p>
         </section>
 
         <section class="comic-panel">
-            <img src="https://placehold.co/800x600/2D3748/F56565?text=Felix+Meets+Allies&font=Montserrat" alt="Felix Meets Allies" class="comic-img">
+            
+                <img  style="display: block; margin-left: auto; margin-right: auto;" src="https://placehold.co/1200x800/2D3748/F56565?text=Felix+Meets+Allies&font=Montserrat" alt="Felix Meets Allies" class="comic-img">
+            
             <p class="text-gray-300 text-base mt-2 comic-text">
-                With his wit, courage, and a band of unlikely allies – a wise-cracking sprite, a stoic golem, and a rebellious mage – Felix races against time to restore balance to Aetheria.
+                Along the way, Felix encounters a band of unlikely allies: a wise-cracking sprite from the rings of Saturn, a stoic golem forged in the heart of Mars, and a rebellious mage exiled from Neptune, all ready to rumble.  But this time, they are not just fighting for Aetheria, but for the survival of all free beings in the solar system.  Despite his comical drunkenness, Felix's wit and courage are tested as he leads the charge in a desperate laser war against the robot invaders.
             </p>
         </section>
 
         <section class="comic-panel">
-            <img src="https://placehold.co/800x600/2D3748/F56565?text=Final+Battle&font=Montserrat" alt="Final Battle" class="comic-img">
+            
+                <img style="display: block; margin-left: auto; margin-right: auto;"  src="https://placehold.co/1200x800/2D3748/F56565?text=Final+Battle&font=Montserrat" alt="Final Battle" class="comic-img">
+            
             <p class="text-gray-300 text-base mt-2 comic-text">
-               Experience a world of breathtaking landscapes, thrilling battles, and unforgettable characters, all brought to life with stunning AI-generated visuals.
+               Experience breathtaking landscapes, thrilling battles, and unforgettable characters, all brought to life with stunning AI-generated visuals that span the cosmos, as laser beams clash and planets tremble in this epic showdown.
             </p>
         </section>
     </main>
