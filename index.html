@@ -40,7 +40,7 @@
             border-radius: 16px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
             transition: transform 0.3s ease-in-out;
-            margin-bottom: -0.5rem;
+            margin-bottom: 0.5rem;
             align-self: center; /* Center the image */
         }
         .comic-img:hover {
@@ -48,12 +48,12 @@
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
         }
         .comic-title {
-            color: #f56565;
+            color: #93c5fd;
             margin-bottom: 1.5rem;
             font-size: 2.5rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
             text-align: center;
-            display: none;
+            display: block; /* Make sure the title is displayed */
         }
         .comic-text {
             color: #e2e8f0;
@@ -76,7 +76,7 @@
                 height: auto;
                 max-height: 1000px;
                 flex-shrink: 0;
-                margin-bottom: -0.5rem; /* Reduced margin-bottom */
+                margin-bottom: 0.5rem; /* Reduced margin-bottom */
                 align-self: center; /* Keep image centered */
             }
             .comic-text {
@@ -86,7 +86,7 @@
             }
         }
         header {
-            background: linear-gradient(to right, #4a5568, #2d3748);
+            background: linear-gradient(to right, #93c5fd, #60a5fa);
             padding: 2rem 0;
             border-bottom: 1px solid #718096;
         }
@@ -94,6 +94,7 @@
             font-size: 3rem;
             font-weight: 600;
             letter-spacing: 0.1em;
+            color: #00008b;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             text-align: center;
         }
@@ -121,7 +122,9 @@
 
     <main class="container mx-auto py-8 px-4">
         <section class="comic-panel">
-            <a href="/docs/1" >
+            
+             <h2 class="comic-title">Felix Discovers Power</h2>
+             <a href="/docs/1" >
                 <img  style="display: block; margin-left: auto; margin-right: auto;" src="https://placehold.co/1200x800/2D3748/F56565?text=Felix+Discovers+Power&font=Montserrat" alt="Felix Discovers Power" class="comic-img">
             </a>
             <p class="text-gray-300 text-base mt-2 comic-text">
@@ -130,7 +133,9 @@
         </section>
 
         <section class="comic-panel">
-            <a href="/docs/2" >
+            
+             <h2 class="comic-title">Dark Force Approaches</h2>
+             <a href="/docs/2" >
                 <img  style="display: block; margin-left: auto; margin-right: auto;"  src="https://placehold.co/1200x800/2D3748/F56565?text=Dark+Force+Approaches&font=Montserrat" alt="Dark Force Approaches" class="comic-img">
             </a>
              <p class="text-gray-300 text-base mt-2 comic-text">
@@ -139,6 +144,8 @@
         </section>
 
         <section class="comic-panel">
+            
+            <h2 class="comic-title">Felix Meets Allies</h2>
             <a href="/docs/3" >
                 <img  style="display: block; margin-left: auto; margin-right: auto;" src="https://placehold.co/1200x800/2D3748/F56565?text=Felix+Meets+Allies&font=Montserrat" alt="Felix Meets Allies" class="comic-img">
             </a>
@@ -148,6 +155,8 @@
         </section>
 
         <section class="comic-panel">
+            
+            <h2 class="comic-title">Final Battle</h2>
             <a href="/docs/4" >
                 <img style="display: block; margin-left: auto; margin-right: auto;"  src="https://placehold.co/1200x800/2D3748/F56565?text=Final+Battle&font=Montserrat" alt="Final Battle" class="comic-img">
             </a>
